@@ -14,7 +14,6 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
     -   [Continued development](#continued-development)
     -   [Useful resources](#useful-resources)
 -   [Author](#author)
--   [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -31,8 +30,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: (https://github.com/Ao-chi/loopstudios-landing-page-main.git)
+-   Live Site URL: (https://loopstudios-landingpage1.netlify.app/)
 
 ## My process
 
@@ -131,4 +130,4 @@ I will continue to practice more using vanilla JS since it's a bit hard for me w
 
 ## Author
 
--   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Ao-chi)
+-   Frontend Mentor - [@Ao-chi](https://www.frontendmentor.io/profile/Ao-chi)

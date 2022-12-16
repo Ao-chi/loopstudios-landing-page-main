@@ -74,7 +74,7 @@ function createGallery() {
     data.forEach(({ id, text }) => {
         const imgContainer = document.createElement("div");
         imgContainer.className = "creations__image";
-        imgContainer.id = "creationsImg";
+        imgContainer.id = `creationsImg-${id}`;
 
         imgContainer.innerHTML = `
                 <div class="creations__overlay"></div>
@@ -93,7 +93,7 @@ function mobile() {
     data.forEach(({ id, text }) => {
         const imgContainer = document.createElement("div");
         imgContainer.className = "creations__image";
-        imgContainer.id = "creationsImg";
+        imgContainer.id = `creationsImg-${id}`;
 
         imgContainer.innerHTML = `
                 <div class="creations__overlay"></div>
@@ -110,7 +110,7 @@ function mobile() {
 
 // function to remove gallery
 function removeGallery() {
-    const item = document.querySelectorAll("#creationsImg");
+    const item = document.querySelectorAll(".creations__image");
     for (let i = 0; i < item.length; i++) {
         const e = item[i];
         cardContainer.removeChild(e);
