@@ -395,11 +395,11 @@ button {
 .footer__right .social__links {
   margin: 0 0.5rem;
 }
-.footer__right .social__links span {
+.footer__right .social__links i {
   font-size: 26px;
   transition: transform ease 0.3s;
 }
-.footer__right .social__links span::after {
+.footer__right .social__links i::after {
   content: "";
   display: block;
   background: hsl(0deg, 0%, 100%);
@@ -409,13 +409,13 @@ button {
   margin-top: 0.5rem;
   transition: width ease 0.3s;
 }
-.footer__right .social__links span:hover::after {
+.footer__right .social__links i:hover::after {
   width: 100%;
 }
-.footer__right .social__links span:hover::before {
+.footer__right .social__links i:hover::before {
   transform: translateY(-80%);
 }
-.footer__right .social__links:hover span {
+.footer__right .social__links:hover i {
   color: hsl(233deg, 8%, 79%);
 }
 .footer__right .copyright {
@@ -481,6 +481,21 @@ button {
 body.fixed {
   height: 100%;
   overflow: hidden;
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 992px) {
+  .overlay {
+    height: 800px;
+  }
 }
 
 .intro {
@@ -721,11 +736,12 @@ body.fixed {
     width: 40%;
   }
   .creations__text {
+    padding: 1.5rem 3rem;
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6078140729) 0%, rgba(255, 255, 255, 0) 84%);
   }
   .creations__text h2 {
-    width: 70%;
+    width: 100%;
   }
 }
 

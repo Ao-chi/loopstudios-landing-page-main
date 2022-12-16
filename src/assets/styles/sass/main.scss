@@ -13,6 +13,15 @@ body {
     }
 }
 
+.overlay {
+    content: "";
+    @include pos-absolute(0, 0, 0, 0);
+    background: rgb(0, 0, 0, 0.3);
+
+    @include breakpoint(md, min) {
+        height: 800px;
+    }
+}
 .intro {
     padding: 5%;
     // opacity: 0;
@@ -272,11 +281,12 @@ body {
             }
         }
         &__text {
+            padding: $p-1_5 $p-3;
             background: rgb(0, 0, 0);
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.607814072894783) 0%, rgba(255, 255, 255, 0) 84%);
 
             h2 {
-                width: 70%;
+                width: 100%;
             }
         }
     }
