@@ -79,9 +79,9 @@ function createGallery() {
         imgContainer.innerHTML = `
                 <div class="creations__overlay"></div>
                 <div class="creations__imgContainer">
-                    <img class="creations__img" id="img" src="/images/desktop/image-desktop-${id}.jpg" alt="image-${id}" />
+                    <img class="creations__img" id="img-${id}" src="/images/desktop/image-desktop-${id}.jpg" alt="image-${id}" />
                 </div>
-                <div class="creations__text" id="cardTitle">
+                <div class="creations__text" id="cardTitle-${id}">
                 <h2>${text}</h2></div>
                 `;
 
@@ -98,9 +98,9 @@ function mobile() {
         imgContainer.innerHTML = `
                 <div class="creations__overlay"></div>
                 <div class="creations__imgContainer">
-                    <img class="creations__img" id="img" src="/images/mobile/image-mobile-${id}.jpg" alt="image-${id}" />
+                    <img class="creations__img" id="img-${id}" src="/images/mobile/image-mobile-${id}.jpg" alt="image-${id}" />
                 </div>
-                <div class="creations__text" id="cardTitle">
+                <div class="creations__text" id="cardTitle-${id}">
                 <h2>${text}</h2></div>
                 `;
 
