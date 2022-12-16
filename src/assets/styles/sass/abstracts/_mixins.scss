@@ -1,0 +1,45 @@
+// font family
+@mixin Epilouge-font {
+    font-family: "Epilogue", sans-serif;
+}
+@mixin Alata-font {
+    font-family: "Alata", sans-serif;
+}
+@mixin Josefin-Sans-font {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+// breakpoints
+@mixin breakpoint($breakpoint: md, $key: min, $orientation: false) {
+    @if ($orientation) {
+        @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+//display flex
+@mixin display-flex($align-items, $justify-conntent) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-conntent;
+}
+
+// hidden visibility
+@mixin visibility-hiddden($visibility, $opacity) {
+    visibility: $visibility;
+    opacity: $opacity;
+}
+
+//position absolute
+@mixin pos-absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

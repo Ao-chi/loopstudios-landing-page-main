@@ -1,0 +1,54 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+    @include Alata-font;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    transition: ease-in-out 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    @include Josefin-Sans-font;
+    font-weight: font-weight(font-normal);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+p {
+    font-size: font-size(fs-15);
+    font-weight: font-weight(font-normal);
+    margin-bottom: 1rem;
+    color: $medium-gray;
+    line-height: 1.7;
+}
+
+a {
+    @include Josefin-Sans-font;
+    color: $white;
+    font-weight: font-weight(font-normal);
+}
+
+h1 {
+    color: $white;
+    font-size: $h1-font-size;
+}
+
+h2 {
+    color: $black;
+    font-size: $h2-font-size;
+}

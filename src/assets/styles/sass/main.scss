@@ -1,0 +1,319 @@
+@import "./abstracts/reset";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+@import "./base/base";
+@import "./base/fonts";
+@import "./components/header", "./components/footer";
+
+body {
+    &.fixed {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+.intro {
+    padding: 5%;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    &.show {
+        animation: fadeInUp 0.2s ease-in-out 0.2s 1 both;
+    }
+    .wrapper {
+        position: relative;
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    &__image {
+        background-color: $soft-red;
+        background: url("/images/mobile/image-interactive.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        min-height: 300px;
+        width: 100%;
+        margin-bottom: $p-1;
+    }
+
+    &__text {
+        text-align: center;
+
+        h2 {
+            font-size: font-size(fs-32);
+        }
+        p {
+            padding: $p-0_5 $p-1_5;
+        }
+    }
+
+    @include breakpoint(md, min) {
+        position: relative;
+        padding: 5% 0;
+
+        .wrapper {
+            padding: 0 $p-3;
+            padding-top: 5%;
+        }
+        &__image {
+            background-color: $soft-red;
+            background: url("/images/desktop/image-interactive.jpg");
+            background-position: left 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            width: 100%;
+            margin-bottom: $p-1;
+        }
+
+        &__text {
+            text-align: left;
+            max-width: 580px;
+            background: $white;
+            padding: 5rem 5rem 0 4rem;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            h2 {
+                font-size: font-size(fs-40);
+                margin-bottom: $p-1_5;
+            }
+            p {
+                padding: $p-0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.creations {
+    // padding: 5%;
+    padding: $p-3 5% 5% 5%;
+
+    &.show {
+        animation: fadeInUp 0.4s ease-in-out 0s 1 both;
+
+        .wrapper {
+            opacity: 1;
+        }
+    }
+
+    .wrapper {
+        opacity: 0;
+        position: relative;
+        height: 100%;
+        margin: 0 auto;
+        @include display-flex(center, center);
+        flex-direction: column;
+    }
+
+    &__heading {
+        padding: $p-1 0 $p-3 0;
+        h2 {
+            font-size: font-size(fs-32);
+            text-align: center;
+        }
+    }
+
+    &__cards {
+        @include display-flex(center, center);
+        flex-direction: column;
+        gap: $p-1_5;
+        margin-bottom: $p-1_5;
+    }
+
+    &__image {
+        position: relative;
+        height: 160px;
+
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+
+            .creations__text {
+                background: rgba(255, 255, 255, 0.7);
+                h2 {
+                    color: $black;
+                }
+            }
+        }
+
+        &:nth-child(1),
+        &:nth-child(4) {
+            #cardTitle {
+                h2 {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+    &__imgContainer {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    &__img {
+        width: inherit;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__overlay {
+        content: "";
+        @include pos-absolute(0, 0, 0, 0);
+    }
+
+    &__text {
+        padding: $p-1_5;
+        @include display-flex(end, flex-start);
+        @include pos-absolute(0, 0, 0, 0);
+        width: 100%;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(86deg, rgba(0, 0, 0, 0.607814072894783) 0%, rgba(255, 255, 255, 0) 84%);
+        z-index: 1;
+
+        h2 {
+            color: $white;
+            font-size: font-size(fs-28);
+            width: 55%;
+        }
+    }
+
+    &__button {
+        text-align: center;
+        margin-bottom: $p-1_5;
+
+        button {
+            @include Alata-font;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            border: 1px solid $black;
+            padding: 0.675rem 2.5rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $white;
+                background: $black;
+            }
+        }
+    }
+    @include breakpoint(sm, min) {
+        .wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    }
+
+    @include breakpoint(md, min) {
+        .wrapper {
+            @include display-flex(flex-start, space-between);
+            max-width: 1200px;
+            flex-direction: column;
+            padding: 0 $p-3;
+            padding-bottom: 6rem;
+        }
+        &__heading {
+            h2 {
+                font-size: font-size(fs-40);
+                text-align: left;
+            }
+            &:nth-child(1) {
+                order: 1;
+            }
+            width: 50%;
+        }
+
+        &__cards {
+            @include display-flex(center, center);
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1.375rem;
+            margin-bottom: $p-1_5;
+            &:nth-child(2) {
+                order: 3;
+            }
+        }
+
+        &__button {
+            position: absolute;
+            top: 0.5rem;
+            right: 4rem;
+            &:nth-child(3) {
+                order: 2;
+            }
+        }
+        &__image {
+            height: 455px;
+
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+
+                .creations__text {
+                    background: rgba(255, 255, 255, 0.8);
+                    h2 {
+                        color: $black;
+                    }
+                }
+            }
+
+            &:nth-child(1),
+            &:nth-child(4) {
+                #cardTitle {
+                    h2 {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+        &__text {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.607814072894783) 0%, rgba(255, 255, 255, 0) 84%);
+
+            h2 {
+                width: 70%;
+            }
+        }
+    }
+}
+
+//animations
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 60px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.hover_effect {
+    &::after {
+        content: "";
+        display: block;
+        background: $white;
+        width: 0;
+        height: 2px;
+        margin: auto;
+        transition: width ease 0.3s;
+    }
+    &:hover::after {
+        width: 50%;
+    }
+}
