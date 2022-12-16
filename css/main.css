@@ -485,7 +485,6 @@ body.fixed {
 
 .intro {
   padding: 5%;
-  opacity: 0;
   transition: opacity 0.3s ease-out;
 }
 .intro.show {
@@ -566,7 +565,6 @@ body.fixed {
   opacity: 1;
 }
 .creations .wrapper {
-  opacity: 0;
   position: relative;
   height: 100%;
   margin: 0 auto;

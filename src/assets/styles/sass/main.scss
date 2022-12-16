@@ -15,7 +15,7 @@ body {
 
 .intro {
     padding: 5%;
-    opacity: 0;
+    // opacity: 0;
     transition: opacity 0.3s ease-out;
     &.show {
         animation: fadeInUp 0.2s ease-in-out 0.2s 1 both;
@@ -101,7 +101,7 @@ body {
     }
 
     .wrapper {
-        opacity: 0;
+        // opacity: 0;
         position: relative;
         height: 100%;
         margin: 0 auto;
