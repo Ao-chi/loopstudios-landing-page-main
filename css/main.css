@@ -148,10 +148,10 @@ header .hero-header.sticky .brand svg path,
 header .hero-header.sticky .nav-open svg path {
   fill: hsl(0deg, 0%, 0%);
 }
-header .hero-header.sticky .nav__items {
+header .hero-header.sticky .navigation__items {
   color: hsl(0deg, 0%, 0%);
 }
-header .hero-header .nav {
+header .hero-header .navigation {
   display: none;
 }
 header .hero-header .nav-mobile {
@@ -179,13 +179,13 @@ header .hero-header .nav-mobile .brand button:hover {
 header .hero-header .nav-mobile .brand svg path {
   fill: hsl(0deg, 0%, 100%);
 }
-header .hero-header .nav-mobile .nav {
+header .hero-header .nav-mobile .navigation {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-header .hero-header .nav-mobile .nav__list {
+header .hero-header .nav-mobile .navigation__list {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -194,14 +194,14 @@ header .hero-header .nav-mobile .nav__list {
   transform: translateX(-200%);
   transition: transform 0.6s ease-in;
 }
-header .hero-header .nav-mobile .nav__list li {
+header .hero-header .nav-mobile .navigation__list li {
   margin-bottom: 1rem;
 }
-header .hero-header .nav-mobile .nav__list.fade-right {
+header .hero-header .nav-mobile .navigation__list.fade-right {
   opacity: 1;
   transform: translateX(0);
 }
-header .hero-header .nav-mobile .nav__items {
+header .hero-header .nav-mobile .navigation__items {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.75rem;
   font-weight: 300;
@@ -285,10 +285,10 @@ button {
   header .hero-header.sticky .brand {
     margin: 0 auto;
   }
-  header .hero-header.sticky .nav {
+  header .hero-header.sticky .navigation {
     margin: 0 auto;
   }
-  header .hero-header.sticky .nav .hover_effect::after {
+  header .hero-header.sticky .navigation .hover_effect::after {
     content: "";
     display: block;
     background: hsl(0deg, 0%, 0%);
@@ -297,21 +297,21 @@ button {
     margin: auto;
     transition: width ease 0.3s;
   }
-  header .hero-header.sticky .nav .hover_effect:hover::after {
+  header .hero-header.sticky .navigation .hover_effect:hover::after {
     width: 50%;
   }
-  header .hero-header .nav {
+  header .hero-header .navigation {
     display: block;
   }
-  header .hero-header .nav__list {
+  header .hero-header .navigation__list {
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
-  header .hero-header .nav__list li {
+  header .hero-header .navigation__list li {
     padding: 1rem;
   }
-  header .hero-header .nav__items {
+  header .hero-header .navigation__items {
     font-weight: 400;
     position: relative;
   }

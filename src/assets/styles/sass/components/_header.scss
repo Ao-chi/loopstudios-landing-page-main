@@ -42,14 +42,14 @@ header {
                     }
                 }
             }
-            .nav {
+            .navigation {
                 &__items {
                     color: $black;
                 }
             }
         }
 
-        .nav {
+        .navigation {
             display: none;
         }
 
@@ -79,7 +79,7 @@ header {
                     }
                 }
             }
-            .nav {
+            .navigation {
                 height: 100%;
                 @include display-flex(center, flex-start);
                 &__list {
@@ -178,7 +178,7 @@ button {
                 .brand {
                     margin: 0 auto;
                 }
-                .nav {
+                .navigation {
                     margin: 0 auto;
                     .hover_effect {
                         &::after {
@@ -196,7 +196,7 @@ button {
                     }
                 }
             }
-            .nav {
+            .navigation {
                 display: block;
                 &__list {
                     @include display-flex(center, flex-start);

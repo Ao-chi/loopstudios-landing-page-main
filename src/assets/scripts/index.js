@@ -2,7 +2,7 @@ const cardContainer = document.querySelector(".creations__cards");
 const navClose = document.querySelector("#navClose");
 const navOpen = document.querySelector("#navOpen");
 const mobileNav = document.querySelector("#navMobile");
-const fadeRight = document.querySelector(".nav-mobile .nav__list");
+const fadeRight = document.querySelector(".nav-mobile .navigation__list");
 
 // image gallery data
 const data = [
